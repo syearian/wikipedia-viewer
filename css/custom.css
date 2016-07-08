@@ -1,0 +1,31 @@
+body {
+  background-color: darkcyan;
+}
+
+h1.title {
+  color: floralwhite;
+}
+
+a.random {
+  color: floralwhite;
+}
+
+#submit {
+  position: absolute;
+  left: -9999;
+}
+
+.articleLink, .articleLink:hover {
+  text-decoration: none;
+}
+
+.articleDiv {
+  margin: 1em;
+  padding: 1em;
+  color: black;
+  background-color: ivory;
+  } 
+
+.articleDiv:hover {
+  border-left: 4px solid orange;
+}
