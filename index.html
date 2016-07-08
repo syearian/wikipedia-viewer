@@ -14,12 +14,13 @@
     <main class="container-fluid">
       
       <section class="row">
-        <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-3 col-lg-offset-4">
-          <h1>Wikipedia Viewer</h1>
-          <p><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Click here to see a random article</a></p>
-          <form class="form-inline">
-            <input id="search" class="form-control" type="text" name="search" >
-            <button type="submit" id="submit" class="btn btn-default">Submit</button>
+        <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-3 col-lg-offset-4 text-center">
+          <h1 class="title">Wikipedia Viewer</h1>
+          <p><a class="random" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Read a random article</a></p>
+          <form>
+            <div class="form-group">
+              <input id="search" class="form-control" type="text" name="search" placeholder="Search for articles">
+              <!--<button type="submit" id="submit" class="btn btn-default">Submit</button>-->
             </div>
           </form>
         </div>
@@ -27,18 +28,18 @@
       
       <section class="row">
         <div id="list" class="col-xs-10 col-xs-offset-1">
-          <div class="aarticleDiv">
-            <a>
-              <h2 class="articleh2">First Article</h2>
+          <a class="articleLink" href="https://en.wikipedia.org/wiki/Main_Page" target="_blank">
+            <div class="articleDiv">
+              <h4 class="articleh2">First Article</h4>
 	            <p class="articlep">Consequat eiusmod consequat eiusmod veniam sunt ex adipisicing magna anim mollit proident. Enim nulla eu labore ex laborum adipisicing consequat pariatur.</p>
-            </a>	
           </div>
-          <div class="articleDiv">
-            <a class="articlelink">
-              <h2 class="articleh2">Second Article</h2>
+          </a>          
+          <a class="articleLink" href="https://en.wikipedia.org/wiki/Main_Page" target="_blank">
+            <div class="articleDiv">
+              <h4 class="articleh2">Second Article</h4>
 	            <p class="articlep">Reprehenderit aute esse consectetur officia deserunt ut minim nulla exercitation cillum officia magna esse.</p>
-            </a>	
           </div>
+          </a>          
         </div>
       </section> <!-- End list section -->
       
