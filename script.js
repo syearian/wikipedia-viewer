@@ -14,7 +14,6 @@ function getSearchVal() {
 }
 
 function getContent(search) {
-  getSearchVal();
   var searchUrl = spacesToPlus(search);
   var jsonUrl = "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&list=search&srsearch=" + searchUrl;
   var json = {};
@@ -31,12 +30,26 @@ function strip(html)
    return tmp.textContent;
 } // found at http://stackoverflow.com/questions/822452/strip-html-from-text-javascript; slightly edited
 
+function removeContent() {
+  document.getElementById('list').innerHTML = "";
+}
+
 function setContent (data) {
+  removeContent();
   getContent();
   var searchData = data.query.search;
 
 }
 
-$(document).ready(function() {
+function getArticleList() {
+  var search = getSearchVal();
+  var data = getContent(search);
+  setContent();
+}
 
+$(document).ready(function() {
+  document.getElementById('searchForm').onsubmit = function(e) {
+    e.preventDefault();
+    return getArticleList()
+  }
 });
