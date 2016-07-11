@@ -21,7 +21,6 @@ function getContent(search) {
   // var json = {};
   $.getJSON(jsonUrl, function(json) {
     var data = json;
-    console.log(data);
     setContent(data);
   });
 }
