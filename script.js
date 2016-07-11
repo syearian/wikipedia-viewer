@@ -41,12 +41,7 @@ function setContent (data) {
     var title = searchData[k].title;
     var snippet = searchData[k].snippet;
     var url = "https://en.wikipedia.org/wiki/" + spacesToUnderscore(title);
-    document.getElementById('list').insertAdjacentElement('beforeend', <a class="articleLink" href="https://en.wikipedia.org/wiki/Main_Page" target="_blank">
-            <div class="articleDiv">
-              <h4 class="articleh2"></h4>
-	            <p class="articlep"></p>
-          </div>
-          </a> )
+    document.getElementById('list').insertAdjacentElement('beforeend', '<a class="articleLink" href="' + url + '" target="_blank"><div class="articleDiv"><h4 class="articleh2">' + title + '</h4><p class="articlep">' + snippet + '</p></div></a>' )
   }
 }
 
