@@ -25,13 +25,6 @@ function getContent(search) {
   });
 }
 
-function strip(html)
-{
-   var tmp = document.createElement("DIV");
-   tmp.innerHTML = html;
-   return tmp.textContent;
-} // found at http://stackoverflow.com/questions/822452/strip-html-from-text-javascript; slightly edited
-
 function removeContent() {
   document.getElementById('list').innerHTML = "";
 }
