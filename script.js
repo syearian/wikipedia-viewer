@@ -36,15 +36,24 @@ function removeContent() {
 
 function setContent (data) {
   removeContent();
-  getContent();
   var searchData = data.query.search;
-
+  for (k in searchData) {
+    var title = searchData[k].title;
+    var snippet = searchData[k].snippet;
+    var url = "https://en.wikipedia.org/wiki/" + spacesToUnderscore(title);
+    document.getElementById('list').insertAdjacentElement('beforeend', <a class="articleLink" href="https://en.wikipedia.org/wiki/Main_Page" target="_blank">
+            <div class="articleDiv">
+              <h4 class="articleh2"></h4>
+	            <p class="articlep"></p>
+          </div>
+          </a> )
+  }
 }
 
 function getArticleList() {
   var search = getSearchVal();
   var data = getContent(search);
-  setContent();
+  setContent(data);
 }
 
 $(document).ready(function() {
