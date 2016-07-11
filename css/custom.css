@@ -12,7 +12,7 @@ a.random {
 
 #submit {
   position: absolute;
-  left: -9999;
+  left: -9999px;
 }
 
 .articleLink, .articleLink:hover {
