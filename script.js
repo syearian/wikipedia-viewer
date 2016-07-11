@@ -39,12 +39,12 @@ function removeContent() {
 
 function setContent (data) {
   removeContent();
-  var searchData = data["query"].search;
+  var searchData = data.query.search;
   for (k in searchData) {
     var title = searchData[k].title;
     var snippet = searchData[k].snippet;
     var url = "https://en.wikipedia.org/wiki/" + spacesToUnderscore(title);
-    document.getElementById('list').insertAdjacentElement('beforeend', '<a class="articleLink" href="' + url + '" target="_blank"><div class="articleDiv"><h4 class="articleh2">' + title + '</h4><p class="articlep">' + snippet + '</p></div></a>' )
+    $('#list').append('<a class="articleLink" href="' + url + '" target="_blank"><div class="articleDiv"><h4 class="articleh2">' + title + '</h4><p class="articlep">' + snippet + '</p></div></a>');
   }
 }
 
