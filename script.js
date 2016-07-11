@@ -43,7 +43,7 @@ function setContent (data) {
     var title = searchData[k].title;
     var snippet = searchData[k].snippet;
     var url = "https://en.wikipedia.org/wiki/" + spacesToUnderscore(title);
-    $('#list').append('<a class="articleLink" href="' + url + '" target="_blank"><div class="articleDiv"><h4 class="articleh2">' + title + '</h4><p class="articlep">' + snippet + '</p></div></a>');
+    $('#list').append('<a class="articleLink" href="' + url + '" target="_blank"><div class="articleDiv"><h4>' + title + '</h4><p">' + snippet + '</p></div></a>');
   }
 }
 
