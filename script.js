@@ -13,14 +13,17 @@ function getSearchVal() {
   return searchTerms;
 }
 
+// var data = {};
+
 function getContent(search) {
   var searchUrl = spacesToPlus(search);
-  var jsonUrl = "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&list=search&srsearch=" + searchUrl;
-  var json = {};
-  $getJSON(jsonUrl, function(data) {
-    json = data;
+  var jsonUrl = "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&list=search&srsearch=" + searchUrl + "&callback=?";
+  // var json = {};
+  $.getJSON(jsonUrl, function(json) {
+    var data = json;
+    console.log(data);
+    setContent(data);
   });
-  return json;
 }
 
 function strip(html)
@@ -36,7 +39,7 @@ function removeContent() {
 
 function setContent (data) {
   removeContent();
-  var searchData = data.query.search;
+  var searchData = data["query"].search;
   for (k in searchData) {
     var title = searchData[k].title;
     var snippet = searchData[k].snippet;
@@ -48,7 +51,6 @@ function setContent (data) {
 function getArticleList() {
   var search = getSearchVal();
   var data = getContent(search);
-  setContent(data);
 }
 
 $(document).ready(function() {
