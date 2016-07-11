@@ -6,6 +6,10 @@ h1.title {
   color: floralwhite;
 }
 
+.random, .articleLink, .random:visited, .articleLink:visited, .articleLink:hover, .random:active, .articleLink:active {
+  text-decoration: none;
+}
+
 a.random {
   color: floralwhite;
 }
@@ -13,10 +17,6 @@ a.random {
 #submit {
   position: absolute;
   left: -9999px;
-}
-
-.articleLink, .articleLink:hover {
-  text-decoration: none;
 }
 
 .articleDiv {
